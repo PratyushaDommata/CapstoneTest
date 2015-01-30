@@ -1,0 +1,40 @@
+<HTML>
+      <HEAD>
+        <TITLE>Average</TITLE>
+
+        <script type="text/javascript">
+          function calcAvg()
+          {
+
+            	var num1 = document.myform.number1.value;
+            	var num2 = document.myform.number2.value;
+		var num3 = document.myform.number3.value;
+             	var num4 = document.myform.number4.value;
+		var num5 = document.myform.number5.value;
+             
+var calcResult = performCalc(num1,num2,num3,num4,num5);
+             
+
+             document.getElementByName('averageResult').value = calcResult;
+          }
+function performCalc(num1,num2,num3,num4,num5)
+{
+var avg = (parseInt(num1) + parseInt(num2) + parseInt(num3) + parseInt(num4) + parseInt(num5))/5;
+return avg;
+}
+
+        </script>
+      </HEAD>
+
+      <BODY>
+        <FORM NAME="myform">
+         Value1: <INPUT TYPE="text" NAME="number1" VALUE=0 onChange="calcAvg()"> </br>
+          Value2: <INPUT TYPE="text" NAME="number2" VALUE=0 onChange="calcAvg()"> </br>
+	Value3: <INPUT TYPE="text" NAME="number3" VALUE=0 onChange="calcAvg()">  </br>
+          Value4: <INPUT TYPE="text" NAME="number4" VALUE=0 onChange="calcAvg()"> </br>
+	Value5: <INPUT TYPE="text" NAME="number5" VALUE=0 onChange="calcAvg()"> </br>
+         Average Result: <INPUT TYPE="text" ID="averageResult" NAME="averageResult" VALUE=""/>
+        </FORM>
+
+      </BODY>
+</HTML>
